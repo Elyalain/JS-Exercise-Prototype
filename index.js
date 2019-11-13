@@ -71,7 +71,8 @@ return '${this.name},${this.age}';
 function Car(model,milesPerGallon) {
 this. model=model;
 this.milesPerGallon= milesPerGallon;
-
+this.tanc== 0;
+this.odometer=0;
 }
 
 /*
