@@ -70,6 +70,8 @@ return '${this.name},${this.age}';
 
 function Car(model,milesPerGallon) {
 this. model=model;
+this.milesPerGallon= milesPerGallon;
+
 }
 
 /*
