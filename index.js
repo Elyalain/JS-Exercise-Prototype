@@ -45,12 +45,13 @@ function Person(name,age) {
   this.stomach =[];
 Person.prototype.eat =function(someFood){
 if (this.stomach.length !=10){
-  this.stomach = [];
+  this.stomach.push(someFood);
+}
 }
 Person.prototype.poop = function(someFood){
 this.stomach =[];
 }
-
+Person.
 /*
   TASK 2
     - Write a Car constructor that initializes `model` and `milesPerGallon` from arguments.
