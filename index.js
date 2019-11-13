@@ -68,8 +68,8 @@ return '${this.name},${this.age}';
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
 
-function Car() {
-
+function Car(model,milesPerGallon) {
+this. model=model;
 }
 
 /*
