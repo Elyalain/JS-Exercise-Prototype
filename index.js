@@ -51,7 +51,9 @@ if (this.stomach.length !=10){
 Person.prototype.poop = function(someFood){
 this.stomach =[];
 }
-Person.
+Person.prototype.toString= function(someFood)
+return '${this.name},${this.age}';
+}
 /*
   TASK 2
     - Write a Car constructor that initializes `model` and `milesPerGallon` from arguments.
