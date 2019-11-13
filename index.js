@@ -74,6 +74,12 @@ this.milesPerGallon= milesPerGallon;
 this.tanc== 0;
 this.odometer=0;
 }
+Car.prototype.drive=function(distance){
+  const gallons-distance
+}
+Car.prototype.fill=function(gallons){
+  this.tank +=gallons;
+}
 
 /*
   TASK 3
