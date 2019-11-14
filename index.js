@@ -74,17 +74,22 @@ this.milesPerGallon= milesPerGallon;
 this.tank== 0;
 this.odometer=0;
 }
-Car.prototype.drive=function(distance){
-  const gallons=distance / this.milesPerGallon;
-  const fullTankDist=this.tank * this.milesPerGallon
-  if(fullTankDist <= distance){
-    this.odometer += fullTankDist;
-  }
-}
 Car.prototype.fill=function(gallons){
   this.tank +=gallons;
 }
-
+Car.prototype.drive=function(distance){
+  const gallons=distance / this.milesPerGallon;
+  const fullTankDist=this.tank * this.milesPerGallon
+  if(fullTankDist < distance){
+    this.odometer += fullTankDist;
+    this.tank =0;
+    return 'I ran out of fuel at ${this.pdometer}miles!';
+  }
+  else{
+    this.odometer += distance;
+    this.tank =gallons;
+  }
+}
 /*
   TASK 3
     - Write a Baby constructor subclassing Person.
@@ -92,7 +97,7 @@ Car.prototype.fill=function(gallons){
     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
         + Should return a string "Playing with x", x being the favorite toy.
 */
-function Baby() {
+function Baby(name,age,favoriteToy) {
 
 }
 
