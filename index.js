@@ -71,11 +71,15 @@ return '${this.name},${this.age}';
 function Car(model,milesPerGallon) {
 this. model=model;
 this.milesPerGallon= milesPerGallon;
-this.tanc== 0;
+this.tank== 0;
 this.odometer=0;
 }
 Car.prototype.drive=function(distance){
-  const gallons-distance
+  const gallons=distance / this.milesPerGallon;
+  const fullTankDist=this.tank * this.milesPerGallon
+  if(fullTankDist <= distance){
+    this.odometer += fullTankDist;
+  }
 }
 Car.prototype.fill=function(gallons){
   this.tank +=gallons;
